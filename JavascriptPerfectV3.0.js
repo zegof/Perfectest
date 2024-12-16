@@ -17,17 +17,6 @@ async function sendMes(text) {
 	// Ein neues <div> für die Chat-Nachricht erstellen
 	const erstelleDiv = document.createElement("div");
 	erstelleDiv.className = "ausgabe-text";
-
-	// Initialisiere Typed.js
-	/*
-	var typed = new Typed(erstelleDiv, {
-		strings: [text],
-		typeSpeed: 50, // Geschwindigkeit des Schreibens
-		showCursor: false, // Gibt an ob der Cursor angezeigt werden soll
-		loop: false // Wiederhole den Effekt
-	}); 
-	*/
-	
 	
 	var textSplit = text.split("");
 	textSplit.forEach(function (char, index) {
