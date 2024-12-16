@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<title> Mein Titel </title>
+		
+	</head>
+	<body>
+	
+	
+	<script>
+    function erstelleButtonUndHandler() {
+    const meinButton = document.createElement("button");
+    meinButton.innerText = "Klick mich!";
+    meinButton.addEventListener("click", function() {
+        console.log("Button wurde geklickt!");
+        // Weitere Aktionen hier...
+    });
+
+    // Füge den Button zum DOM hinzu
+    document.body.appendChild(meinButton);
+}
+
+// Rufe die Funktion auf
+erstelleButtonUndHandler();
+ 
+    </script>
+	</body>
+</html>

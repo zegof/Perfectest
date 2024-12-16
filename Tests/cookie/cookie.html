@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    #cookie-popup {
+    text-align: center;
+    background: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    #cookie-popup.hidden {
+        display: none;
+    }
+
+    </style>
+<script>
+function setCookie(cname,cvalue,exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  let user = getCookie("username");
+  if (user != "") {
+    alert("Welcome again " + user);
+  } else {
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+     }
+  }
+}
+function changeLernen(mode) {
+
+
+}
+</script>
+
+</head>
+
+
+
+<div id="cookie-popup">
+    <div class="hinweis">
+        <p>Wir verwenden Cookies. Durch die weitere Nutzung der Webseite stimmen Sie der Verwendung von Cookies zu.</p>
+    </div>
+    <span class="more">
+        <a href="datenschutz.html">Details</a>
+    </span>
+    <button onclick="changeLernen">OK, ich bin einverstanden.</button>
+    <button onclick="changeLernen(off);">Ich bin nicht einverstanden.</button>
+</div>
+</body>
+
+</html>

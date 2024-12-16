@@ -1,0 +1,19 @@
+<form id="contact-form" method="POST" action="sendmail.php">
+    <div class="form-row">
+        <label for="contact-form-name">Name:</label>
+        <input id="contact-form-name" class="form-input" type="text" name="name" required>
+    </div>
+    <div class="form-row">
+        <label for="contact-form-email">E-Mail:</label>
+        <input id="contact-form-email" class="form-input" type="email" name="email" required>
+    </div>
+    <div class="form-row">
+        <label for="contact-form-phone">Telefon:</label>
+        <input id="contact-form-phone" class="form-input" type="tel" name="phone">
+    </div>
+    <div class="form-row">
+        <label for="contact-form-message">Nachricht:</label>
+        <textarea id="contact-form-message" class="form-input" name="message" required></textarea>
+    </div>
+    <button type="submit">Absenden</button>
+</form>

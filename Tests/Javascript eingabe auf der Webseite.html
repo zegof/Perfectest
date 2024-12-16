@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Eingabe auf der Webseite</h1>
+
+<p>Bitte geben Sie etwas ein:</p>
+
+<input type="text" id="meineEingabe" name="meineEingabe">
+
+<button onclick="meineFunktion()">Absenden</button>
+
+<p id="ausgabe"></p>
+
+<script>
+function meineFunktion() {
+  let x = document.getElementById("meineEingabe").value;
+  document.getElementById("ausgabe").innerHTML = "Sie haben eingegeben: " + x;
+}
+</script>
+
+</body>
+</html>
